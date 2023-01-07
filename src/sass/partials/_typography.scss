@@ -1,3 +1,26 @@
-h1, h2, h3, h4, h5, p, a {
-  font-family: $font-family;
+h1, h2, h3, h4, h5, a {
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: $color-main;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: $color-main;
+  filter: grayscale(50%);
+  font-size: 14px;
+  padding: 20px 0;
+  text-align: center;
+  padding-inline: 12px;
+}
+
+.discover-title {
+  font-weight: $font-regular;
+  letter-spacing: 5px;
+  margin: 15px 0;
 }

@@ -1,5 +1,16 @@
-/*.container {}
+// Global
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-.page {}
+body {
+  font-family: $font-sans;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
 
-body {}*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

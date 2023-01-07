@@ -1,0 +1,73 @@
+// Splash
+
+.splash {
+  height: 715px;
+  background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)),
+          url(../images/background.png);
+  background-size: cover;
+  color: $color-white;
+}
+
+// Navigation
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.logo {
+  letter-spacing: 4px;
+}
+
+.logo-title {
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.logo-subtitle {
+  margin: 0 auto;
+  font-weight: $font-regular;
+  font-size: 10px;
+}
+
+.main-nav {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+// Header
+
+.header {
+  margin-block: 150px;
+  position: relative;
+  font-size: 40px;
+  line-height: 1;
+  .one {
+    text-align: start;
+    letter-spacing: 15px;
+    }
+      .two {
+      padding-bottom: 50px;
+      text-align: end;
+      letter-spacing: 15px;
+    }
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  right: 40%;
+  border-bottom: 3px solid $color-main;
+  width: 20%;
+}
+
+.discover {
+  text-align: center;
+  font-size: 20px;
+}
