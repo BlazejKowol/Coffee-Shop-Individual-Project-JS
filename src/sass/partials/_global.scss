@@ -14,3 +14,19 @@ body {
   margin: 0 auto;
   padding: 0 60px;
 }
+
+.section-title {
+  position: relative;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  border-bottom: 4px solid $color-main;
+  width: 50%;
+}
