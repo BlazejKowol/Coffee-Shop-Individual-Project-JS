@@ -40,37 +40,38 @@
                 <div id="home-page" class="home-page container"></div>
             </section>
             <section id="products">
-                <div id="products-page" class="product-page container"></div>
+                <div id="products-page" class="products-page container"></div>
             </section>
             <section id="contact">
                 <div id="contact-page" class="contact-page container"></div>
             </section>
         </div>
 
-        <!--miejsce na skrypt-->
+        <!--script id="template-product" type="text/x-handlebars-template"-->
             <section class="product">
                 <div class="container">
                     <div class="product-header">
                         <h2 class="section-title">Products</h2>
                     </div>
-                    <div class="row">
+                    <div class="row wrapper">
                         <div class="col-6">
-                            <h3 class="product-name">{{ name }}</h3>
-                                <p class="description">{{ description }}</p>
-                                <h4 class="roasting">{{ roasting }}/10</h4>
-                                <h4 class="intensity">{{ intensity }}/10</h4>
+                            <h3 class="product-name">01. La Lagartija</h3>
+                                <div class="row border">
+                                    <div class="col-3"></div>
+                                    <p class="col-9 description">Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.</p>
+                                </div>
+                                <h4 class="roasting">Roasting: <p class="rating"> 5/10</p></h4>
+                                <h4 class="intensity">Intensity: <p class="rating"> 6/10</p></h4>
                         </div>
                         <div class="col-6">
-                            <div class="image">
-                                {{#each images}}
-                                {{{ this }}}
-                                {{/each}}
+                            <div class="image-wrap">
+                                <img class="image" src="../images/coffee-1.png">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        <!--miejsce na zakończenie skryptu-->
+        <!--/script-->
 
         <section class="about-us">
             <div class="container">

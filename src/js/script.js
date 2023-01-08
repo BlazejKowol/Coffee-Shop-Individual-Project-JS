@@ -1,4 +1,4 @@
-import {settings} from './settings.js';
+import {select, settings, templates, utils} from './settings.js';
 
 const app = {
   initData: function(){
@@ -11,9 +11,20 @@ const app = {
       .then ((parsedResponse) => {
         this.data.products = parsedResponse;
       });
+    console.log('this data:', this.data);
+  },
+  
+  render() {
+    const generatedHTML = templates.products(this.data);
+    
+    this.element = utils.createDOMFromHTML(generatedHTML);
+    const productContainer = document.querySelector(select.containerOf.products);
+    productContainer.appendChild(this.element);
   },
 
   init: function() {
+    this.initData();
+    this.render();
   },
 };
 
