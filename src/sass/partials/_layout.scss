@@ -3,9 +3,9 @@
 .splash {
   height: 715px;
   background: linear-gradient(
-          rgba(0, 0, 0, 0.7), 
-          rgba(0, 0, 0, 0.7)),
-          url(../images/background.png);
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)),
+    url(../images/background.png);
   background-size: cover;
   color: $color-white;
 }
@@ -46,15 +46,17 @@
   position: relative;
   font-size: 40px;
   line-height: 1;
+
   .one {
     text-align: start;
     letter-spacing: 15px;
-    }
-      .two {
-      padding-bottom: 50px;
-      text-align: end;
-      letter-spacing: 15px;
-    }
+  }
+
+  .two {
+    padding-bottom: 50px;
+    text-align: end;
+    letter-spacing: 15px;
+  }
 }
 
 .header::before {
