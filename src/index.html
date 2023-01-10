@@ -60,7 +60,7 @@
                         <h3 class="product-name">{{ name }}</h3>
                             <div class="row border">
                                 <div class="col-3"></div>
-                                <p class="col-9 description">{{{ description }}}</p>
+                                <p class="col-9 description">{{ description }}</p>
                             </div>
                             <h4 class="roasting">Roasting: <p class="rating">{{ roasting }}/10</p></h4>
                             <h4 class="intensity">Intensity: <p class="rating">{{ intensity }}/10</p></h4>
@@ -98,7 +98,7 @@
         </div>
     </div>
 
-    <!--script-->
+    <script id="template-contact" type="text/x-handlebars-template">
         <section class="contact-us">
             <div class="container">
                 <h2 class="section-title">Contact us</h2>
@@ -113,7 +113,7 @@
                     </form>
             </div>
         </section>
-    <!--/script-->
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
