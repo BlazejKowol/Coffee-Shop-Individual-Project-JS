@@ -40,6 +40,11 @@
                 <div id="home-page" class="home-page container"></div>
             </section>
             <section id="products">
+                <div class="product-header">
+                    <div class="container">
+                        <h2 class="section-title">Products</h2>
+                    </div>
+                </div>
                 <div id="products-page" class="products-page container"></div>
             </section>
             <section id="contact">
@@ -50,10 +55,7 @@
     <script id="template-product" type="text/x-handlebars-template">
         <section class="product">
             <div class="container">
-                <div class="product-header">
-                    <h2 class="section-title">Products</h2>
-                </div>
-                <div class="row wrapper">
+                <div class="row wrapper {{reverse}}">
                     <div class="col-6">
                         <h3 class="product-name">{{ name }}</h3>
                             <div class="row border">
@@ -113,7 +115,7 @@
         </section>
     <!--/script-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.0/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
 </body>
 </html>

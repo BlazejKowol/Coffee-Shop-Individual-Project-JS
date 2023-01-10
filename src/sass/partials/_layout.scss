@@ -80,11 +80,11 @@
 // Products
 
 .product {
-  margin-block: 50px;
+  margin-block: 65px;
 }
 
-.wrapper {
-  padding-top: 60px;
+.reverse {
+  flex-direction: row-reverse;
 }
 
 .image-wrap {
@@ -143,9 +143,6 @@
     url(../images/about-us.jpg);
   background-size: cover;
   color: $color-white;
-  .section-title {
-    padding-top: 50px;
-  }
 }
 
 .text-about {

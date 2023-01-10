@@ -2,9 +2,10 @@ import {select, settings, templates} from './settings.js';
 import utils from './utils.js';
 
 class Product{
-  constructor(data, id){
-    this.data = data;
+  constructor(id, data){
+
     this.id = id;
+    this.data = data;
 
     this.render();
     console.log('new Product', this);
@@ -21,6 +22,7 @@ class Product{
 }
 
 const app = {
+  
   initProduct: function(){
     console.log('this data:', this.data);
 
@@ -30,8 +32,10 @@ const app = {
   },
 
   initData: function(){
-    const url = settings.db.url + '/' + settings.db.products;
+
     this.data = {};
+    const url = settings.db.url + '/' + settings.db.products;
+
     fetch(url)
       .then((rawResponse) => {
         return rawResponse.json();
@@ -40,7 +44,7 @@ const app = {
         this.data.products = parsedResponse;
         this.initProduct();
       });
-    //console.log('this data:', this.data);
+    console.log('This Data', JSON.stringify(this.data));
   },
 
   init: function() {
