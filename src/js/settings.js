@@ -3,7 +3,7 @@ export const select = {
     product: '#template-product',
   },
   containerOf: {
-    products: '#products=page',
+    products: '#products-page',
   },
 };
 
@@ -16,14 +16,4 @@ export const settings = {
 
 export const templates = {
   products: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
-};
-
-/* global Handlebars */
-
-export const utils = {}; // eslint-disable-line no-unused-vars
-
-utils.createDOMFromHTML = function(htmlString) {
-  let div = document.createElement('div');
-  div.innerHTML = htmlString.trim();
-  return div.firstChild;
 };

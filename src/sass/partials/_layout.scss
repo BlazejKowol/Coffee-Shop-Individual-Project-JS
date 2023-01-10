@@ -203,3 +203,13 @@ button {
   width: 50%;
   cursor: pointer;
 }
+
+/* Media */
+
+@media (max-width: 767px) {
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

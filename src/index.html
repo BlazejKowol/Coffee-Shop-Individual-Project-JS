@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Coffee Shop Project</title>
+  <title>El Tigre | Venezuelan Coffee Shop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,31 +47,33 @@
             </section>
         </div>
 
-        <!--script id="template-product" type="text/x-handlebars-template"-->
-            <section class="product">
-                <div class="container">
-                    <div class="product-header">
-                        <h2 class="section-title">Products</h2>
-                    </div>
-                    <div class="row wrapper">
-                        <div class="col-6">
-                            <h3 class="product-name">01. La Lagartija</h3>
-                                <div class="row border">
-                                    <div class="col-3"></div>
-                                    <p class="col-9 description">Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.</p>
-                                </div>
-                                <h4 class="roasting">Roasting: <p class="rating"> 5/10</p></h4>
-                                <h4 class="intensity">Intensity: <p class="rating"> 6/10</p></h4>
-                        </div>
-                        <div class="col-6">
-                            <div class="image-wrap">
-                                <img class="image" src="../images/coffee-1.png" alt="La Lagartija Coffee">
+    <script id="template-product" type="text/x-handlebars-template">
+        <section class="product">
+            <div class="container">
+                <div class="product-header">
+                    <h2 class="section-title">Products</h2>
+                </div>
+                <div class="row wrapper">
+                    <div class="col-6">
+                        <h3 class="product-name">{{ name }}</h3>
+                            <div class="row border">
+                                <div class="col-3"></div>
+                                <p class="col-9 description">{{{ description }}}</p>
                             </div>
+                            <h4 class="roasting">Roasting: <p class="rating">{{ roasting }}/10</p></h4>
+                            <h4 class="intensity">Intensity: <p class="rating">{{ intensity }}/10</p></h4>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-wrap">
+                            {{#each image}}
+                            {{{ this }}}
+                            {{/each}}
                         </div>
                     </div>
                 </div>
-            </section>
-        <!--/script-->
+            </div>
+        </section>
+    </script>
 
         <section class="about-us">
             <div class="container">
@@ -111,7 +113,7 @@
         </section>
     <!--/script-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.0/handlebars.min.js"></script>
+    <script src="js/app.js" type="module"></script>
 </body>
 </html>
