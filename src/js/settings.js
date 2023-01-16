@@ -10,6 +10,7 @@ export const select = {
     products: '#products-page',
     contact: '#contact-page',
     productsSection: '#products',
+    contactSection: '#contact',
   },
   nav: {
     links: '.main-nav a',

@@ -90,12 +90,15 @@ const app = {
         page.classList.add('hidden');
       } else {
         page.classList.remove('hidden');
-        //debugger;
       }
-      /*if(pageId == 'home' && page.classList.contains('active')){
+      if(pageId == 'home' && page.classList.contains('active')){
         const pageProducts = document.querySelector(select.containerOf.productsSection);
+        const pageContact = document.querySelector(select.containerOf.contactSection);
         pageProducts.classList.remove('hidden');
-      }*/
+        pageProducts.classList.add('active');
+        pageContact.classList.add('hidden');
+        break;
+      }
     }
 
     for(let link of this.navLinks){
