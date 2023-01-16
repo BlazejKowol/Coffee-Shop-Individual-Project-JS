@@ -1,5 +1,6 @@
 export const select = {
   templateOf: {
+    home: '#template-home',
     product: '#template-product',
     contact: '#template-contact',
   },
@@ -8,6 +9,7 @@ export const select = {
     home: '#home-page',
     products: '#products-page',
     contact: '#contact-page',
+    productsSection: '#products',
   },
   nav: {
     links: '.main-nav a',
@@ -22,6 +24,7 @@ export const settings = {
 };
 
 export const templates = {
+  home: Handlebars.compile(document.querySelector(select.templateOf.home).innerHTML),
   products: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
   contact: Handlebars.compile(document.querySelector(select.templateOf.contact).innerHTML),
 };

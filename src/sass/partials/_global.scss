@@ -31,3 +31,8 @@ body {
   border-bottom: 4px solid $color-main;
   width: 50%;
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

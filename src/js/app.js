@@ -8,7 +8,6 @@ class Product{
     this.data = data;
 
     this.render();
-    console.log('new Product', this);
   }
 
   render(){
@@ -31,6 +30,20 @@ class Contact{
     const generatedHTML = templates.contact();
     this.dom = {};
     this.dom.wrapper = contactPage;
+    this.dom.wrapper.innerHTML = generatedHTML;
+  }
+}
+
+class Home{
+  constructor(homePage){
+
+    this.render(homePage);
+  }
+
+  render(homePage){
+    const generatedHTML = templates.home();
+    this.dom = {};
+    this.dom.wrapper = homePage;
     this.dom.wrapper.innerHTML = generatedHTML;
   }
 }
@@ -73,27 +86,42 @@ const app = {
 
     for(let page of this.pages){
       page.classList.toggle('active', page.id == pageId);
+      if(!page.classList.contains('active')){
+        page.classList.add('hidden');
+      } else {
+        page.classList.remove('hidden');
+        //debugger;
+      }
+      /*if(pageId == 'home' && page.classList.contains('active')){
+        const pageProducts = document.querySelector(select.containerOf.productsSection);
+        pageProducts.classList.remove('hidden');
+      }*/
     }
 
     for(let link of this.navLinks){
-      link.classList.toggle(
-        'active', 
+      link.classList.toggle('active', 
         link.getAttribute('href') == '#' + pageId);
     }
+
   },
   
   initProduct: function(){
-    console.log('this data:', this.data);
 
     for(let product in this.data.products){
       new Product(product, this.data.products[product]);
     }
   },
 
-  initContact: function (){
+  initContact: function(){
     const contactPage = document.querySelector(select.containerOf.contact);
 
     this.contact = new Contact(contactPage);
+  },
+
+  initHome: function(){
+    const homePage = document.querySelector(select.containerOf.home);
+
+    this.home = new Home(homePage);
   },
 
   initData: function(){
@@ -109,13 +137,13 @@ const app = {
         this.data.products = parsedResponse;
         this.initProduct();
       });
-    console.log('This Data', JSON.stringify(this.data));
   },
 
   init: function() {
-    this.initPages();
-    this.initContact();
     this.initData();
+    this.initHome();
+    this.initContact();
+    this.initPages();
   },
 };
 
