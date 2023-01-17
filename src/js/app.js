@@ -15,7 +15,7 @@ class Product{
     const generatedHTML = templates.products(this.data);
     this.element = utils.createDOMFromHTML(generatedHTML);
 
-    const productContainer = document.querySelector(select.containerOf.products);
+    const productContainer = document.querySelector(select.containerOf.products); // I could just use querySelectorAll and copy div in html instead of using If in activatePage
     productContainer.appendChild(this.element);
   }
 }
