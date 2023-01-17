@@ -204,8 +204,71 @@ button {
 /* Media */
 
 @media (max-width: 767px) {
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .section-title {
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
   .nav {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .logo-title {
+    font-size: 20px;
+  }
+
+  a {
+    font-size: 8px;
+    padding-inline: 4px;
+  }
+
+  .about-us {
+    width: 425px;
+  }
+
+  .product-name {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 8px;
+  }
+
+  .roasting, .intensity {
+    font-size: 12px;
+  }
+
+  .col-6 {
+    width: 75%;
+  }
+
+  .row.wrapper {
+    justify-content: center;
+  }
+
+  .image-wrap {
+    height: auto;
+  }
+
+  .text-about {
+    padding-inline: 20px;
+    font-size: 14px;
+  }
+
+  .call-to-action {
+    font-size: 14px;
+  }
+
+  p:last-of-type {
+    font-size: 12px;
   }
 }
