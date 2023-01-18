@@ -57,7 +57,7 @@ const app = {
 
     const idFromHash = window.location.hash.replace('#/', '');
 
-    let pageMatchingHash = this.pages[0].id;
+    let pageMatchingHash = this.pages[1].id;
 
     for(let page of this.pages){
       if(page.id == idFromHash){
